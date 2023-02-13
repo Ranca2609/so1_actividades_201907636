@@ -9,5 +9,5 @@ git_user=$(echo $Json_GitHub | jq ".login")
 created_at=$(echo $Json_GitHub | jq ".created_at")
 mensaje="Hola "$git_user". User ID: "$user_id". Cuenta fue creada el:"$created_at"."  
 fecha=`date +"%Y-%d-%m"`
-mkdir -p "/tmp/$DIA"
-echo mensaje >> "/tmp/$DIA/saludos.log"
+mkdir -p "/tmp/$fecha"
+echo mensaje >> "/tmp/$fecha/saludos.log"
